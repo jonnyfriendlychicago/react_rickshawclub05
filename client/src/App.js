@@ -6,6 +6,9 @@ import {BrowserRouter, Routes, Route, Link, Navigate, HashRouter} from "react-ro
 import Header from "./Components/PageLayout/Header";
 import Home from "./Components/Verticals/Home";
 import Rickshaws from "./Components/Verticals/Rickshaws";
+import Gear from "./Components/Verticals/Gear";
+import Community from "./Components/Verticals/Community";
+import About from "./Components/Verticals/About";
 
 function App() {
     return (
@@ -19,7 +22,13 @@ function App() {
 
                     <Route path="/rickshaws" element={<Rickshaws/>} />
 
-                    {/*<redirect to="/" />*/}
+                    <Route path="/gear" element={<Gear/>} />
+
+                    <Route path="/community" element={<Community/>} />
+
+                    <Route path="/about" element={<About/>} />
+
+
                     <Route path='*' element={<Navigate to='/' />} />
                 </Routes>
             </BrowserRouter>
