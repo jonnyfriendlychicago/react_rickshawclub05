@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {Container, Row, Col, Card} from 'react-bootstrap';
 
-const About = (props) => {
+const Community = (props) => {
 
     return (
         <>
@@ -15,10 +15,16 @@ const About = (props) => {
                             <Row>
                                 <Col className="d-flex flex-wrap justify-content-center">
 
-                                    <Card className="text-center m-3 border-0" style={{width: "18rem",  height: "25rem"}}>
+                                    {/*<Card className="text-center m-3 border-0" style={{width: "18rem",  height: "25rem"}}>*/}
+                                    <Card className="text-center m-3 border-0 " style={{width: "50rem"}}>
+                                        {/*    <Card className="text-center m-3 border-0" >*/}
                                         <Card.Body>
-                                            <Card.Title>Comms Baby</Card.Title>
-                                            <Card.Img fluid src='../Assets/Images/bigyellow.png'  />
+                                            <Card.Text>There are 10,000 rickshaw club hoodies circling cyberspace. Each rickshaw club hoodie features unique intricate designs, patterns, and color combinations that pay homage to the traditional rickshaw and its cultural significance. Each rickshaw club hoodie is one of a kind.
+                                            </Card.Text>
+                                            <Card.Text>Rickshaw club hoodies are made with sustainable materials such as organic cotton and recycled polyester. Rickshaw club is for eco-conscious and culturally curious citizens who want to celebrate rickshaws.
+                                            </Card.Text>
+                                            <Card.Text>Rickshaw club design principles are simple: no repeats, no zippers, no inventory.
+                                            </Card.Text>
                                         </Card.Body>
                                     </Card>
 
@@ -36,4 +42,4 @@ const About = (props) => {
     ) // end return
 } // end const
 
-export default About;
+export default Community;

@@ -13,15 +13,19 @@ const Header = (props) => {
                 {/*<Container fluid>*/}
                 <Container >
                     {/*<Navbar.Brand href="/">Rickshaw World</Navbar.Brand>*/}
-                    <LinkContainer to="/">
-                        <Navbar.Brand >Rickshaw Club</Navbar.Brand>
-                    </LinkContainer>
+                    {/*<LinkContainer to="/">*/}
+                        <Navbar.Brand style={{fontWeight: "bold"}}>Rickshaw Club</Navbar.Brand>
+                    {/*</LinkContainer>*/}
 
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             {/*<Nav.Link href="/rickshaws">Rickshaws</Nav.Link>*/}
+
+                            <LinkContainer to="/">
+                                <Nav.Link>Home</Nav.Link>
+                            </LinkContainer>
 
                             <LinkContainer to="/rickshaws">
                                 <Nav.Link>Rickshaws</Nav.Link>
@@ -45,17 +49,19 @@ const Header = (props) => {
                             {/*<Nav.Link eventKey={2} href="#memes">*/}
                             {/*  Dank memes*/}
                             {/*</Nav.Link>*/}
-                            <NavDropdown title="JonnyFriendly9" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">
-                                    Another action
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">
-                                    Separated link
-                                </NavDropdown.Item>
-                            </NavDropdown>
+
+                            {/*/!*everything that follows is great, but OOS for present dev stage*!/*/}
+                            {/*<NavDropdown title="JonnyFriendly9" id="collasible-nav-dropdown">*/}
+                            {/*    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>*/}
+                            {/*    <NavDropdown.Item href="#action/3.2">*/}
+                            {/*        Another action*/}
+                            {/*    </NavDropdown.Item>*/}
+                            {/*    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>*/}
+                            {/*    <NavDropdown.Divider />*/}
+                            {/*    <NavDropdown.Item href="#action/3.4">*/}
+                            {/*        Separated link*/}
+                            {/*    </NavDropdown.Item>*/}
+                            {/*</NavDropdown>*/}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

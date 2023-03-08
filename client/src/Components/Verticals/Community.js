@@ -15,10 +15,19 @@ const Community = (props) => {
                             <Row>
                                 <Col className="d-flex flex-wrap justify-content-center">
 
-                                    <Card className="text-center m-3 border-0" style={{width: "18rem",  height: "25rem"}}>
+                                    {/*<Card className="text-center m-3 border-0" style={{width: "18rem",  height: "25rem"}}>*/}
+                                    <Card className="text-center m-3 border-0 " style={{width: "50rem"}}>
+                                        {/*    <Card className="text-center m-3 border-0" >*/}
                                         <Card.Body>
-                                            <Card.Title>Comms Baby</Card.Title>
-                                            <Card.Img fluid src='../Assets/Images/bigyellow.png'  />
+                                            <Card.Title>RICKSHAW CLUB VALUES</Card.Title>
+                                            <Card.Text>Charity, community, culture, curiousity, creativity, sustainability, travel, and knowledge.
+                                            </Card.Text>
+                                            <Card.Title>RICKSHAW CLUB PERKS</Card.Title>
+                                            <Card.Text>Events, dao access, networking opportunites, private chat group, and web3 onboarding.
+                                            </Card.Text>
+                                            <Card.Title>RICKSHAW CLUB PAC</Card.Title>
+                                            <Card.Text>On-chain political action committee to further rickshaw club causes coming 2024.
+                                            </Card.Text>
                                         </Card.Body>
                                     </Card>
 
