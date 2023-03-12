@@ -1,31 +1,41 @@
 import React, { useState } from "react";
 import {Container, Row, Col, Card} from 'react-bootstrap';
 import axios from 'axios';
+import {useNavigate} from "react-router-dom";
 const Join = (props) => {
-
-    //keep track of what is being typed via useState hook
-    // const [firstName, setFirstName] = useState("");
-    // const [lastName, setLastName] = useState("");
 
     const [email, setEmail] = useState("");
     const [nameFirst, setNameFirst] = useState("");
     const [nameLast, setNameLast] = useState("");
     const [ethereumWalletAddy, setEthereumWalletAddy] = useState("");
-    //handler when the form is submitted
+
+    const navigate = useNavigate();
+
     const onSubmitHandler = (e) => {
         //prevent default behavior of the submit
         e.preventDefault();
         //make a post request to create a new person
-        axios.post('http://3.145.203.81/api/inquiry', {
-        // axios.post('http://localhost:8080/api/inquiry', {
-            email,
-            nameFirst,    // this is shortcut syntax for firstName: firstName,
-            nameLast,
-            ethereumWalletAddy// this is shortcut syntax for lastName: lastName
-        })
+        // axios.post('http://3.145.203.81/api/inquiry', {
+        axios
+            // .post(`http://localhost:8080/api/inquiry`, {
+            //     .post(`http://localhost:8080/api/inquirytrytwo`, {
+            .post(`http://3.145.203.81/api/inquirytrytwo`, {
+                email: email,
+                nameFirst: nameFirst,    // this is shortcut syntax for firstName: firstName,
+                nameLast: nameLast,
+                ethereumWalletAddy: ethereumWalletAddy// this is shortcut syntax for lastName: lastName
+            })
             .then(res=>{
-                console.log(res); // always console log to get used to tracking your data!
-                console.log(res.data);
+                console.log(res); // always console log to get used to tracking your data
+                console.log(res.data); // show the data that got captured
+
+                setEmail("");
+                setNameFirst("");
+                setNameLast("");
+                setEmail("");
+
+                navigate("/"); // added below to enable "redirect" to homepage
+
             })
             .catch(err=>console.log(err))
     }
