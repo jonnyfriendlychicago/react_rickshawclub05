@@ -43,6 +43,10 @@ const Header = (props) => {
                                 <Nav.Link>About</Nav.Link>
                             </LinkContainer>
 
+                            <LinkContainer to="/join">
+                                <Nav.Link>Join</Nav.Link>
+                            </LinkContainer>
+
                         </Nav>
                         <Nav>
                             {/*<Nav.Link href="#deets">More deets</Nav.Link>*/}

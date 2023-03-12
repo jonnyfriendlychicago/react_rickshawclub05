@@ -9,6 +9,7 @@ import Rickshaws from "./Components/Verticals/Rickshaws";
 import Gear from "./Components/Verticals/Gear";
 import Community from "./Components/Verticals/Community";
 import About from "./Components/Verticals/About";
+import Join from "./Components/Verticals/Join";
 
 function App() {
     return (
@@ -27,6 +28,8 @@ function App() {
                     <Route path="/community" element={<Community/>} />
 
                     <Route path="/about" element={<About/>} />
+
+                    <Route path="/join" element={<Join/>} />
 
 
                     <Route path='*' element={<Navigate to='/' />} />

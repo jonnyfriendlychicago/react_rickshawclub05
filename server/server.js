@@ -19,6 +19,14 @@ app.use(
   router
 );
 
+// begin section taken from https://www.stackhawk.com/blog/react-cors-guide-what-it-is-and-how-to-enable-it/
+// app.get('/cors', (req, res) => {
+//   res.set('Access-Control-Allow-Origin', '*');
+//   res.send({ "msg": "This has CORS enabled" })
+//   })
+
+// end section 
+
 app.listen(
   port,
   () => console.log(`Now listening on port ${port}...`)
